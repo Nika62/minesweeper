@@ -1,6 +1,5 @@
 package ru.example.minesweeper.controller;
 
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +14,7 @@ import ru.example.minesweeper.dto.NewGameRequest;
 import ru.example.minesweeper.model.LineField;
 import ru.example.minesweeper.service.MinesweeperService;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController

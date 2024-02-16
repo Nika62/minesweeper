@@ -1,9 +1,11 @@
 package ru.example.minesweeper.dto;
 
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
+
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 
 @Data
 @AllArgsConstructor

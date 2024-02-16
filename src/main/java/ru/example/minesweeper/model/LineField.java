@@ -1,16 +1,18 @@
 package ru.example.minesweeper.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.Table;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Table;
 
 
 @NoArgsConstructor
@@ -24,7 +26,7 @@ public class LineField {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JoinColumn(name = "line_id")
     private long lineId;
-    private String gameInfo;
+    private String gameId;
     @Column
     private int col;
     @Column
@@ -32,8 +34,8 @@ public class LineField {
     @Column
     private int letter;
 
-    public LineField(String gameInfo, int col, int height, int letter) {
-        this.gameInfo = gameInfo;
+    public LineField(String gameId, int col, int height, int letter) {
+        this.gameId = gameId;
         this.col = col;
         this.height = height;
         this.letter = letter;

@@ -17,6 +17,7 @@ import ru.example.minesweeper.service.Validator;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static ru.example.minesweeper.common.CellValue.BLANC;
 import static ru.example.minesweeper.common.CellValue.EXPLODED_MINE;
@@ -131,7 +132,7 @@ public class MinesweeperServiceImpl implements MinesweeperService {
         List<String[]> result = new ArrayList<>();
         for (int i = 0; i < width; i++) {
             final int k = i;
-            List<LineField> listCols = lines.stream().filter(line -> line.getCol() == k).toList();
+            List<LineField> listCols = lines.stream().filter(line -> line.getCol() == k).collect(Collectors.toList());
             result.add(getRow(listCols, height));
         }
 
