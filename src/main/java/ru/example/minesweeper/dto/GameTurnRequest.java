@@ -1,14 +1,18 @@
 package ru.example.minesweeper.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class GameTurnRequest {
     @NotBlank
-    private final String gameId;
+    private String gameId;
 
-    private final int col;
-    private final int row;
+    private int col;
+    private int row;
 }
