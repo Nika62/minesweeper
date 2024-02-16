@@ -1,8 +1,8 @@
 package ru.example.minesweeper.service.impl;
 
 import lombok.SneakyThrows;
-import org.junit.Ignore;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -47,7 +47,7 @@ class MinesweeperServiceImplTest {
 
     @Test
     @SneakyThrows
-    @Ignore
+    @Disabled
     void createGame() {
         var request = new NewGameRequest(4, 2, 1);
         var gameInfo = getGameInfo();
@@ -61,7 +61,7 @@ class MinesweeperServiceImplTest {
     }
 
     @Test
-    @Ignore
+    @Disabled
     void makeMove() {
         var request = new GameTurnRequest("1", 1, 0);
         var gameInfo = getGameInfo();
